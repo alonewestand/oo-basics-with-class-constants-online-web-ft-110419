@@ -1,26 +1,19 @@
-require pry
+class Book
+  attr_accessor :author, :page_count
+  attr_reader :title, :genre
 
-class Shoe
-  attr_accessor :color, :size, :material, :condition,
-  attr_reader :brand
+  GENRES = []
 
-  BRANDS = []
+  def initialize(title)
+    @title = title
+  end
 
-  def initialize(brand)
-    @brand = brand
+  def turn_page
+    puts "Flipping the page...wow, you read fast!"
   end
-  
-  def cobble
-    self.condition = "new"
-    puts "Your shoe is as good as new!"
+
+  def genre=(genre)
+    @genre = genre
+    GENRES << genre
   end
-  
-  def brand=(brand)
-    @brand = brand
-      binding.pry
-   BRANDS << genre
-  end
-  
-  
-  
 end
